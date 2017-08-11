@@ -12,16 +12,16 @@ class Header extends Component {
           <button className="pull-right visible-xs dk" ui-toggle="show" target=".navbar-collapse">
             <i className="glyphicon glyphicon-collapse-down"></i>
           </button>
-          <a href="#" className="navbar-brand text-lt">
+          <Link to="/" className="navbar-brand text-lt">
             <img src={logo_alpha} />
-          </a>
+          </Link>
         </div>
         <div className="collapse pos-rlt navbar-collapse box-shadow bg-white-only ml-0">
           <div className="container">
             <div className="nav navbar-nav hidden-xs">
-              <a href="#" className="btn no-shadow navbar-btn">
+              <Link to="/" className="btn no-shadow navbar-btn">
                 <img className="ml-3" src={logo_alpha} alt="" width="100px"/>
-              </a>
+              </Link>
             </div>
             <div>
               <ul className="nav navbar-nav hidden-sm">
@@ -48,7 +48,7 @@ class Header extends Component {
                   </ul>
                 </li>
                 <li className="nav-item" key={9}>
-                  <a className="nav-link" href="#">Iniciar Sesión</a>
+                  <Link to="/login" className="nav-link">Iniciar Sesión</Link>
                 </li>
               </ul>
             </div>

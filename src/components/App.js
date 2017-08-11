@@ -1,7 +1,6 @@
 import React from 'react';
 import { Component } from 'react';
 import Header from './Header';
-import Home from './Home/page';
 import '../base.css';
 
 export default class App extends Component {
@@ -9,7 +8,7 @@ export default class App extends Component {
     return (
       <div className="app app-header-fixed">
         <Header />
-        <Home/>
+        {this.props.children}
       </div>
     );
   }
