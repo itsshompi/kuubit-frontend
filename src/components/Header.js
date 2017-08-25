@@ -1,8 +1,6 @@
 import React, { Component } from 'react';
-import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
-import { BUCKET } from '../config/config';
-import logo_alpha from '../images/logo-alpha.png';
+import logo from '../images/logo.png';
 
 class Header extends Component {
   render() {
@@ -13,20 +11,20 @@ class Header extends Component {
             <i className="glyphicon glyphicon-collapse-down"></i>
           </button>
           <Link to="/" className="navbar-brand text-lt">
-            <img src={logo_alpha} />
+            <img src={logo} />
           </Link>
         </div>
         <div className="collapse pos-rlt navbar-collapse box-shadow bg-white-only ml-0">
           <div className="container">
             <div className="nav navbar-nav hidden-xs">
               <Link to="/" className="btn no-shadow navbar-btn">
-                <img className="ml-3" src={logo_alpha} alt="" width="100px"/>
+                <img className="ml-3" src={logo} alt="" width="75px"/>
               </Link>
             </div>
             <div>
               <ul className="nav navbar-nav hidden-sm">
                 <li>
-                  <a href="#">Sobre Nosotros</a>
+                  <Link to="/about/us">Sobre Nosotros</Link>
                 </li>
               </ul>
               <ul className="nav navbar-nav navbar-right">
