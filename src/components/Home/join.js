@@ -1,6 +1,4 @@
 import React from 'react';
-import { BUCKET } from '../../config/config';
-import { Link } from 'react-router-dom';
 
 export default class Clients extends React.Component {
   render() {

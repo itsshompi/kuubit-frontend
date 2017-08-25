@@ -2,13 +2,14 @@ import React, { Component } from 'react';
 import Testimonials from './testimonials';
 import Clients from './clients';
 import Footer from '../Footer';
-import Join from './join';
-import { Link } from 'react-router-dom';
-import { connect } from 'react-redux';
+//import Join from './join';
 //Images
 import home_01 from '../../images/home-01.png';
 
 class Home extends Component {
+  componentDidMount() {
+    document.title = "Kuubit - Home";
+  }
   render() {
     return (
       <div className="animated fadeIn">
@@ -26,7 +27,7 @@ class Home extends Component {
         </div>
         <Testimonials/>
         <Clients/>
-        <Join/>
+
         <Footer/>
       </div>
     );

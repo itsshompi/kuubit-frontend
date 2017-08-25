@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 export default class Footer extends React.Component {
   render() {
@@ -12,13 +13,13 @@ export default class Footer extends React.Component {
             </div>
           </div>
           <ul className="list-inline font-s-12">
-            <li><a href="#">Sobre nosotros</a></li>
-            <li><a href="#">Ayuda</a></li>
-            <li><a href="#">Trabajo</a></li>
-            <li><a href="#">Condiciones</a></li>
-            <li><a href="#">Privacidad</a></li>
-            <li><a href="#">Cookies</a></li>
-            <li><a href="#">Redes Sociales</a></li>
+            <li><Link to="/about/us">Sobre nosotros</Link></li>
+            <li><Link to="/about/faq">Ayuda</Link></li>
+            <li><Link to="/about/jobs">Trabajo</Link></li>
+            <li><Link to="/about/legal/terms">Condiciones</Link></li>
+            <li><Link to="/about/legal/privacy">Privacidad</Link></li>
+            <li><Link to="/about/legal/cookies">Cookies</Link></li>
+            <li><Link to="/about/social">Redes Sociales</Link></li>
             <li>&copy; 2015 - 2017 Kuubit</li>
           </ul>
           <p className="text-muted font-s-11">
