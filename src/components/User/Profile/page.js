@@ -1,5 +1,4 @@
 import React from 'react';
-import { Link } from 'react-router';
 
 //Images
 import avatar from '../../../images/company/avatar01.jpg';

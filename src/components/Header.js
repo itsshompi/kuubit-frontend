@@ -11,7 +11,7 @@ class Header extends Component {
             <i className="glyphicon glyphicon-collapse-down"></i>
           </button>
           <Link to="/" className="navbar-brand text-lt">
-            <img src={logo} />
+            <img src={logo} alt="Kuubit Logo"/>
           </Link>
         </div>
         <div className="collapse pos-rlt navbar-collapse box-shadow bg-white-only ml-0">
@@ -29,7 +29,7 @@ class Header extends Component {
               </ul>
               <ul className="nav navbar-nav navbar-right">
                 <li className="dropdown">
-                  <a href="#" data-toggle="dropdown" className="dropdown-toggle">
+                  <a href="" data-toggle="dropdown" className="dropdown-toggle">
                     <i className="fa fa-fw fa-plus visible-xs-inline-block"></i>
                       <span>Español</span> <span className="caret"></span>
                   </a>

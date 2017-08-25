@@ -1,9 +1,6 @@
 import React from 'react';
-import { Link } from 'react-router';
-import { connect } from 'react-redux';
 
 class SettingsAccount extends React.Component {
-
   render() {
     return (
           <div className="panel panel-default">
@@ -26,8 +23,8 @@ class SettingsAccount extends React.Component {
                     <label>Repetir Contraseña Nueva</label>
                     <input type="password" className="form-control" placeholder="Repita la Contraseña Nueva"/>
                   </div>
-                  <a href="#" className="btn btn-default">Cambiar Contraseña</a>
-                  <a href="#" className="text-info">Olvide mi Contraseña</a>
+                  <a href="" className="btn btn-default">Cambiar Contraseña</a>
+                  <a href="" className="text-info">Olvide mi Contraseña</a>
                 </div>
               </div>
               <div className="col-sm-12">
@@ -38,14 +35,14 @@ class SettingsAccount extends React.Component {
                     <label>Nuevo Nombre de Usuario</label>
                     <input type="password" className="form-control" placeholder="Ingresa tu nuevo nombre de usuario"/>
                   </div>
-                  <a href="#" className="btn btn-default">Cambiar Nombre de Usuario</a>
+                  <a href="" className="btn btn-default">Cambiar Nombre de Usuario</a>
                 </div>
               </div>
               <div className="col-sm-12">
                 <hr/>
                 <h4>Eliminar Cuenta</h4>
                 <div className="col-sm-9">
-                  <a href="#" className="btn btn-danger">Eliminar Cuenta</a>
+                  <a href="" className="btn btn-danger">Eliminar Cuenta</a>
                   <p className="text-muted">
                     Se eliminara la cuenta de los registros de Kuubit en un plazo de 30 días, en caso de que el usuario decida cambiar de opinión.
                   </p>
@@ -57,10 +54,6 @@ class SettingsAccount extends React.Component {
   }
 }
 
-function mapStateToProps(state) {
-  return {
-    user: state.auth.user
-  };
-}
 
-export default connect(mapStateToProps)(SettingsAccount);
+
+export default SettingsAccount;

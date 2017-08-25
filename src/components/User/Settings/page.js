@@ -1,6 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router';
-import { connect } from 'react-redux';
+import { Link } from 'react-router-dom';
 
 class Settings extends React.Component {
 
@@ -53,4 +52,4 @@ class Settings extends React.Component {
   }
 }
 
-export default connect()(Settings);
+export default Settings;

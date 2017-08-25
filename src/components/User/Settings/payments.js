@@ -1,6 +1,4 @@
 import React from 'react';
-import { Link } from 'react-router';
-import { connect } from 'react-redux';
 
 class SettingsPayments extends React.Component {
 
@@ -21,7 +19,7 @@ class SettingsPayments extends React.Component {
                 <label className="control-label h1"><i className="fa fa-usd text-success"></i>16.00 <small>USD</small></label>
               </div>
               <div className="col-sm-8">
-                <a href="#" className="text-info"><i className="fa fa-plus"></i> Añadir Dinero a tu Cuenta de Kuubit</a>
+                <a href="" className="text-info"><i className="fa fa-plus"></i> Añadir Dinero a tu Cuenta de Kuubit</a>
                 <p className="text-muted">
                   <small>Si usted posee dinero en su cuenta de Kuubit y tiene agregado un metodo de pago, primero se tomara en cuenta el dinero en Kuubit y en segunda instancia los metodos de pagos añadidos.</small>
                 </p>
@@ -39,7 +37,7 @@ class SettingsPayments extends React.Component {
                     <label className="control-label"><i className="fa fa-user"></i> Basic Plan</label>
                   </div>
                   <div className="col-sm-4">
-                    <a href="#" className="btn btn-default">Cambiar Tipo de Cuenta</a>
+                    <a href="" className="btn btn-default">Cambiar Tipo de Cuenta</a>
                   </div>
                 </div>
               </div>
@@ -53,7 +51,7 @@ class SettingsPayments extends React.Component {
                     <label className="control-label"><i className="fa fa-warning text-warning"></i> No se a añadido un metodo de pago</label>
                   </div>
                   <div className="col-sm-4">
-                    <a href="#" className="btn btn-default">Añadir Metodo de Pago</a>
+                    <a href="" className="btn btn-default">Añadir Metodo de Pago</a>
                   </div>
                 </div>
               </div>
@@ -76,21 +74,21 @@ class SettingsPayments extends React.Component {
                 <tbody>
                   <tr>
                     <td><i className="fa fa-check text-success"></i></td>
-                    <td>#81231</td>
+                    <td>81231</td>
                     <td>30/05/2015</td>
                     <td>$10.00</td>
                     <td>Basic Plan</td>
                     <td>Paypal</td>
-                    <td> <a href="#" className="text-danger"> <i className="fa fa-download"></i></a></td>
+                    <td> <a href="" className="text-danger"> <i className="fa fa-download"></i></a></td>
                   </tr>
                   <tr>
                     <td><i className="fa fa-check text-success"></i></td>
-                    <td>#81012</td>
+                    <td>81012</td>
                     <td>30/04/2015</td>
                     <td>$10.00</td>
                     <td>Basic Plan</td>
                     <td>Paypal</td>
-                    <td> <a href="#" className="text-danger"> <i className="fa fa-download"></i></a></td>
+                    <td> <a href="" className="text-danger"> <i className="fa fa-download"></i></a></td>
                   </tr>
                 </tbody>
               </table>
@@ -101,10 +99,4 @@ class SettingsPayments extends React.Component {
   }
 }
 
-function mapStateToProps(state) {
-  return {
-    user: state.auth.user
-  };
-}
-
-export default connect(mapStateToProps)(SettingsPayments);
+export default SettingsPayments;

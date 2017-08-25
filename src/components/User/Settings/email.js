@@ -1,6 +1,4 @@
 import React from 'react';
-import { Link } from 'react-router';
-import { connect } from 'react-redux';
 
 class SettingsEmail extends React.Component {
 
@@ -27,7 +25,7 @@ class SettingsEmail extends React.Component {
                     <td>itsshompi@gmail.com</td>
                     <td>Primario</td>
                     <td>Publico</td>
-                    <td> <a href="#" className="text-danger"> <i className="icon icon-trash"></i> Eliminiar </a></td>
+                    <td> <a href="" className="text-danger"> <i className="icon icon-trash"></i> Eliminiar </a></td>
                   </tr>
                 </tbody>
               </table>
@@ -45,7 +43,7 @@ class SettingsEmail extends React.Component {
                   <label>Dirección de Email</label>
                   <input type="email" className="form-control" placeholder="Ingresa tu dirección de Email"/>
                 </div>
-                <a href="#" className="btn btn-default">Añadir Email</a>
+                <a href="" className="btn btn-default">Añadir Email</a>
               </div>
             </div>
             <div className="col-sm-12">
@@ -72,7 +70,7 @@ class SettingsEmail extends React.Component {
                     </label>
                   </div>
                 </div>
-                <a href="#" className="btn btn-default">Cambiar Preferencias</a>
+                <a href="" className="btn btn-default">Cambiar Preferencias</a>
             </div>
           </div>
         </div>
@@ -80,10 +78,5 @@ class SettingsEmail extends React.Component {
   }
 }
 
-function mapStateToProps(state) {
-  return {
-    user: state.auth.user
-  };
-}
 
-export default connect(mapStateToProps)(SettingsEmail);
+export default SettingsEmail;

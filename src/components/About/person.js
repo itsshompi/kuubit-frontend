@@ -7,7 +7,7 @@ export default class Person extends React.Component {
         <div className="person-card shompi">
           <h3 className="">{this.props.name}</h3>
           <span>{this.props.position}</span>
-          <img src={this.props.avatar} className="avatar"/>
+          <img src={this.props.avatar} className="avatar" alt="{this.props.name}<"/>
         </div>
       </div>
     );

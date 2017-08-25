@@ -1,7 +1,6 @@
 import React from 'react';
-import { BUCKET } from '../../config/config';
 import Footer from '../Footer';
-
+//Images
 import kuubit_icon from '../../images/kuubit-icon.png';
 export default class AboutSocialPage extends React.Component {
   render() {

@@ -20,11 +20,11 @@ export default class Clients extends React.Component {
           <div className="row">
             <div className="col-sm-10 col-sm-offset-1">
               <div className="logos text-center">
-                <img src={uct} height="48px"/>
-                <img src={ufro} height="48px"/>
-                <img src={ua} height="48px"/>
-                <img src={umayor} height="48px"/>
-                <img src={inacap} height="48px"/>
+                <img src={uct} height="48px" alt="Universidad Catolica de Temuco"/>
+                <img src={ufro} height="48px" alt="Universidad de la Frontera"/>
+                <img src={ua} height="48px" alt="Universidad Autonoma"/>
+                <img src={umayor} height="48px" alt="Universidad Mayor"/>
+                <img src={inacap} height="48px" alt="Inacap"/>
               </div>
             </div>
           </div>

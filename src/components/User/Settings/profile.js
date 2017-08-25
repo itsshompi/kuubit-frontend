@@ -1,13 +1,11 @@
 import React from 'react';
-import { Link } from 'react-router';
-import { connect } from 'react-redux';
 
 class SettingsProfile extends React.Component {
 
   render() {
 
     const user = this.props.user
-  
+
     return (
           <div className="panel panel-default">
             <div className="panel-heading">
@@ -18,7 +16,7 @@ class SettingsProfile extends React.Component {
               <div className="col-sm-12">
                 <div className="col-sm-2">
                 {user && user.avatar.small &&
-                  <img className="img-rounded" width="75px" src={user.avatar.small}/>
+                  <img className="img-rounded" width="75px" src={user.avatar.small} alt="Avatar Perfil"/>
                 }
                 </div>
                 <div className="col-sm-8">
@@ -50,7 +48,7 @@ class SettingsProfile extends React.Component {
                   <label>Compañia</label>
                   <input type="text" className="form-control" placeholder="Compañia" />
                 </div>
-                <a href="#" className="btn btn-default">Actualizar Perfil</a>
+                <a href="" className="btn btn-default">Actualizar Perfil</a>
               </div>
             </div>
           </div>
@@ -59,10 +57,4 @@ class SettingsProfile extends React.Component {
   }
 }
 
-function mapStateToProps(state) {
-  return {
-    user: state.auth.user
-  };
-}
-
-export default connect(mapStateToProps)(SettingsProfile);
+export default SettingsProfile;

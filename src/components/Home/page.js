@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import Testimonials from './testimonials';
 import Clients from './clients';
 import Footer from '../Footer';
-import Join from './join';
+//import Join from './join';
 //Images
 import home_01 from '../../images/home-01.png';
 
