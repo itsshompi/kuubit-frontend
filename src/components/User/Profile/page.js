@@ -1,6 +1,9 @@
 import React from 'react';
 import { Link } from 'react-router';
 
+//Images
+import avatar from '../../../images/company/avatar01.jpg';
+
 class UserProfile extends React.Component {
   render() {
     return (
@@ -8,7 +11,7 @@ class UserProfile extends React.Component {
         <div className="cover-profile">
           <div className="container-profile">
             <div className="basic-info-profile">
-              <img className="img-profile inner-border" src="https://s3-sa-east-1.amazonaws.com/kuubit-files/users/images/avatar_default01.jpg" alt="..."/>
+              <img className="img-profile inner-border" src={avatar} alt="..."/>
               <h1>Felipe Schneeberger <img src="https://www.tripepismith.com/wp-content/uploads/2015/06/Twitter-checkmark.png" alt="" width="16px"/></h1>
               <h2>Director Ejecutivo &amp; Fundador</h2>
               <h3>Kuubit Inc.</h3>

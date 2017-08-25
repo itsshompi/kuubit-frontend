@@ -19,6 +19,16 @@ import Recovery from './components/Auth/password_recovery';
 //Home
 import Home from './components/Home/page';
 
+//User
+import UserProfile from './components/User/Profile/page';
+
+//User Settings
+//import Settings from './components/User/Settings/page';
+//import SettingsProfile from './components/User/Settings/profile';
+//import SettingsAccount from './components/User/Settings/account';
+//import SettingsEmail from './components/User/Settings/email';
+//import SettingsPayments from './components/User/Settings/payments';
+
 //About
 import AboutUs from './components/About/us';
 import AboutJobs from './components/About/jobs';
@@ -43,6 +53,7 @@ const Root = () => (
         <Route exact path="/about/legal/cookies" component={AboutLegalCookie} />
         <Route exact path="/about/legal/terms" component={AboutLegalTerms} />
         <Route exact path="/about/legal/privacy" component={AboutLegalPrivacy} />
+        <Route exact path="/profile" component={UserProfile} />
         <Auth>
           <Route exact path="/login" component={Login} />
           <Route exact path="/join" component={Join} />
