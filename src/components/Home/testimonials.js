@@ -1,5 +1,7 @@
 import React from "react";
 
+//images
+import pic from '../../images/pic02.jpg';
 export default class Testimonials extends React.Component {
   render() {
     return (
@@ -16,7 +18,7 @@ export default class Testimonials extends React.Component {
                   <h3><strong>"</strong>This thing is one of those tools that everybody should be using. I really like it and with this
                   ease to use, you can kickstart your projects and apps and just focus on your business!<strong>"</strong></h3>
                 <div className="author">
-                  <img src="http://lit-coast-9918.herokuapp.com/v1.3/images/testimonials/testimonial2.jpg" className="pic" alt="testimonial2" />
+                  <img src={pic} className="pic" alt="testimonial2" />
                   Karen Jones - Pixar Co.
                 </div>
               </div>
