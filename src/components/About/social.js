@@ -1,6 +1,6 @@
 import React from 'react';
 import Footer from '../Footer';
-
+import './social.css'
 //Images
 import kuubit_icon from '../../images/kuubit-icon.png';
 
@@ -8,7 +8,7 @@ export default class AboutSocialPage extends React.Component {
   render() {
     return (
       <div className="animated fadeIn">
-        <div className="about-kuubit">
+        <div className="about">
           <div className="container">
             <div className="row">
               <div className="text-center">
