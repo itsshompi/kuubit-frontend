@@ -1,7 +1,13 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import { Provider } from 'react-redux';
 import { Switch, Route } from 'react-router';
 import { BrowserRouter } from 'react-router-dom';
+import { applyMiddleware, createStore } from 'redux';
+import thunk from 'redux-thunk';
+import reducers from './reducers/index';
+import registerServiceWorker from './registerServiceWorker';
+
 import './index.css';
 import 'simple-line-icons/css/simple-line-icons.css'
 import 'font-awesome/css/font-awesome.min.css';
@@ -38,37 +44,37 @@ import AboutLegalCookie from './components/About/legal/cookies';
 import AboutLegalTerms from './components/About/legal/terms';
 import AboutLegalPrivacy from './components/About/legal/privacy';
 
-//Others
-import registerServiceWorker from './registerServiceWorker';
-
+const createStoreWithMiddleware = applyMiddleware(thunk)(createStore);
 const Root = () => (
-  <BrowserRouter>
-    <App>
-      <Switch>
-        <Route exact path="/" component={Home}/>
-        <Route exact path="/about/us" component={AboutUs} />
-        <Route exact path="/about/jobs" component={AboutJobs} />
-        <Route exact path="/about/faq" component={AboutFaq} />
-        <Route exact path="/about/social" component={AboutSocial} />
-        <Route exact path="/about/legal/cookies" component={AboutLegalCookie} />
-        <Route exact path="/about/legal/terms" component={AboutLegalTerms} />
-        <Route exact path="/about/legal/privacy" component={AboutLegalPrivacy} />
-        <Route exact path="/profile" component={UserProfile} />
-        <Route path="/settings" component={Settings}>
-            <Route path="/settings/profile" component={SettingsProfile} />
-            <Route path="/settings/account" component={SettingsAccount} />
-            <Route path="/settings/email" component={SettingsEmail} />
-            <Route path="/settings/payments" component={SettingsPayments} />  
-        </Route>
-        <Auth>
-          <Route exact path="/login" component={Login} />
-          <Route exact path="/join" component={Join} />
-          <Route exact path="/logout" component={Logout} />
-          <Route exact path="/recovery" component={Recovery} />
-        </Auth>
-      </Switch>
-    </App>
-  </BrowserRouter>
+  <Provider store={createStoreWithMiddleware(reducers)}>
+    <BrowserRouter>
+      <App>
+        <Switch>
+          <Route exact path="/" component={Home}/>
+          <Route exact path="/about/us" component={AboutUs} />
+          <Route exact path="/about/jobs" component={AboutJobs} />
+          <Route exact path="/about/faq" component={AboutFaq} />
+          <Route exact path="/about/social" component={AboutSocial} />
+          <Route exact path="/about/legal/cookies" component={AboutLegalCookie} />
+          <Route exact path="/about/legal/terms" component={AboutLegalTerms} />
+          <Route exact path="/about/legal/privacy" component={AboutLegalPrivacy} />
+          <Route exact path="/profile" component={UserProfile} />
+          <Route path="/settings" component={Settings}>
+              <Route path="/settings/profile" component={SettingsProfile} />
+              <Route path="/settings/account" component={SettingsAccount} />
+              <Route path="/settings/email" component={SettingsEmail} />
+              <Route path="/settings/payments" component={SettingsPayments} />
+          </Route>
+          <Auth>
+            <Route exact path="/login" component={Login} />
+            <Route exact path="/join" component={Join} />
+            <Route exact path="/logout" component={Logout} />
+            <Route exact path="/recovery" component={Recovery} />
+          </Auth>
+        </Switch>
+      </App>
+    </BrowserRouter>
+  </Provider>
 );
 
 ReactDOM.render(<Root/>, document.getElementById('root'));
